@@ -2,10 +2,10 @@ require("dotenv").config();
 
 const express = require("express");
 const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
+// const bodyParser = require("body-parser");
 const cors =  require("cors");
-
-
+const cookieParser = require("cookie-parser");
+const authRoute =  require("./Routes/AuthRoute")
 const PORT = process.env.PORT || 3002;
 const URL = process.env.MONGO_URL;
 
@@ -15,10 +15,26 @@ const {OrdersModel} = require("./model/OrdersModel");
 
 const app = express();
 
-mongoose.connect(URL);
+mongoose.connect(URL , {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
+.then(() => console.log("MongoDB is connected Succesfully"))
+.catch((err) => console.log("Error : " , err) )
 
-app.use(cors());
-app.use(bodyParser.json());
+app.use(
+  cors({
+    origin: ["http://localhost:3000"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
+
+// app.use(bodyParser.json());
+app.use(cookieParser());
+app.use(express.json());
+
+app.use("/", authRoute);
 
 // app.get("/addHoldings" , async(req,res) => {
 //     let tempHoldings = [
@@ -204,9 +220,15 @@ app.post('/newOrder' ,  async(req,res) => {
         mode : req.body.mode,
     });
 
-    newOrder.save();
-    res.send("Order Saved");
+    try {
+  await newOrder.save();
+  res.send("Order Saved");
+} catch (err) {
+  res.status(500).send("Error saving order");
+}
+
 })
+
 
 app.listen(PORT , () => {
     console.log("Server Started on PORT 3002")
