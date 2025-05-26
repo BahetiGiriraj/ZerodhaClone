@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 
 function Inverstment() {
     return ( 
@@ -23,7 +23,10 @@ function Inverstment() {
                     <p><h1>Futures & options</h1>Hedge and mitigate <br/> market risk through simplified F&O trading</p>
                 </div>
             </div>
-            <button style={{width:"20%" , margin: "0 auto" , fontSize: "24px"}} type="button" className="btn btn-primary p-2 mt-4 mb-5 ">Explore Inverstment</button>
+            <Link to="/pricing" >
+             <button style={{width:"20%" , margin: "0 auto" , fontSize: "24px"}} type="button" className="btn btn-primary p-2 mt-4 mb-5 ">Explore Inverstment</button>
+            </Link>
+           
         </div>
      );
 }

@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom"
+
 function OpenAccount() {
   return (
     <div className="container text-center mt-5 p-5">
@@ -6,13 +8,16 @@ function OpenAccount() {
         Modern platforms and apps, ₹0 investments, and flat ₹20 intraday and F&O
         trades.
       </p>
-      <button
+      <Link to="/signup ">
+       <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         style={{ width: "20%", margin: "0 auto", fontSize: "24px" }}
         type="button"
         className="btn btn-primary p-2 mt-4 mb-5 "
       >
         Sign up for free
       </button>
+      </Link>
+     
     </div>
   );
 }

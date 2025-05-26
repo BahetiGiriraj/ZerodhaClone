@@ -1,7 +1,9 @@
+import "./Footer.css"
+
 function Footer() {
   return (
     <div
-      className="container-fluid border-top "
+      className="container-fluid border-top"
       style={{ backgroundColor: "#fbfbfb" }}
     >
       <div className="container mt-5">
@@ -17,52 +19,97 @@ function Footer() {
               &copy; 2010 - 2025, Zerodha Broking Ltd. <br />
               All rights reserved.
             </p>
-            <div>
-                <i className="fa-brands fa-x-twitter"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <i className="fa-brands fa-square-facebook"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <i className="fa-brands fa-instagram"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <i className="fa-brands fa-linkedin-in"></i>
+            <div >
+              <i className="fa-brands fa-x-twitter  "></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <i className="fa-brands fa-square-facebook "></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <i className="fa-brands fa-instagram "></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <i className="fa-brands fa-linkedin-in "></i>
             </div>
-            <hr  />
+            <hr />
             <div>
-                <i className="fa-brands fa-youtube"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <i className="fa-brands fa-whatsapp"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <i className="fa-brands fa-telegram"></i>
+              <i className="fa-brands fa-youtube"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <i className="fa-brands fa-whatsapp"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <i className="fa-brands fa-telegram"></i>
             </div>
-            
           </div>
-          <div className="col d-flex flex-column mr-5 " style={{ textDecoration: "none" }}>
+
+          <div className="col d-flex flex-column mr-5">
             <p className="mb-4">Company</p>
-            <a href="#">About</a> <br />
-            <a href="#">Philosophy</a> <br />
-            <a href="#">Press & media</a> <br />
-            <a href="#">Careers</a> <br />
-            <a href="#">Zerodha Cares (CSR)</a> <br />
-            <a href="#">Zerodha.tech</a> <br />
-            <a href="#">Open source</a>
+            <a href="#" style={{ textDecoration: "none" }}>
+              About
+            </a>{" "}
+            <br />
+            <a href="#" style={{ textDecoration: "none" }}>
+              Philosophy
+            </a>{" "}
+            <br />
+            <a href="#" style={{ textDecoration: "none" }}>
+              Press & media
+            </a>{" "}
+            <br />
+            <a href="#" style={{ textDecoration: "none" }}>
+              Careers
+            </a>{" "}
+            <br />
+            <a href="#" style={{ textDecoration: "none" }}>
+              Zerodha Cares (CSR)
+            </a>{" "}
+            <br />
+            <a href="#" style={{ textDecoration: "none" }}>
+              Zerodha.tech
+            </a>{" "}
+            <br />
+            <a href="#" style={{ textDecoration: "none" }}>
+              Open source
+            </a>
             <br />
           </div>
-          <div className="col  d-flex flex-column ">
+
+          <div className="col d-flex flex-column">
             <p>Support</p>
-            <a href="">Contact us</a> <br />
-            <a href="">Support portal</a>
+            <a href="" style={{ textDecoration: "none" }}>
+              Contact us
+            </a>{" "}
             <br />
-            <a href="">How to file a complaint?</a>
+            <a href="" style={{ textDecoration: "none" }}>
+              Support portal
+            </a>
             <br />
-            <a href="">Status of your complaints</a>
+            <a href="" style={{ textDecoration: "none" }}>
+              How to file a complaint?
+            </a>
             <br />
-            <a href="">Z-Connect blog</a>
+            <a href="" style={{ textDecoration: "none" }}>
+              Status of your complaints
+            </a>
             <br />
-            <a href="">Downloads</a>
+            <a href="" style={{ textDecoration: "none" }}>
+              Z-Connect blog
+            </a>
+            <br />
+            <a href="" style={{ textDecoration: "none" }}>
+              Downloads
+            </a>
             <br />
           </div>
-          <div className="col  d-flex flex-column ">
+
+          <div className="col d-flex flex-column">
             <p>Account</p>
-            <a href="">Open demat account </a> <br />
-            <a href="">Fund transfer</a> <br />
-            <a href="">Referral program</a> <br />
+            <a href="" style={{ textDecoration: "none" }}>
+              Open demat account{" "}
+            </a>{" "}
+            <br />
+            <a href="" style={{ textDecoration: "none" }}>
+              Fund transfer
+            </a>{" "}
+            <br />
+            <a href="" style={{ textDecoration: "none" }}>
+              Referral program
+            </a>{" "}
+            <br />
           </div>
         </div>
+
         <div className="mt-5 text-small text-muted">
           <p>
             Zerodha Broking Ltd.: Member of NSE, BSE​ &​ MCX – SEBI Registration
@@ -111,19 +158,37 @@ function Footer() {
             create a ticket here.
           </p>
         </div>
-        <div className="d-flex justify-content-evenly text-muted mb-5" >
-            <a href="" >NSE </a>
-            <a href="">BSE </a>
-            <a href="">MCX</a>
-            <a href="">Terms & conditions</a>
-            <a href="">Policies & procedures </a>
-            <a href="">Privacy policy </a>
-            <a href="">Disclosure </a>
-            <a href="">For investor's attention</a> 
-            <a href="">Investor charter</a>
+
+        <div className="d-flex justify-content-evenly mb-5">
+          <a href="" className=" footer-link text-muted" >
+            NSE{" "}
+          </a>
+          <a href="" className=" footer-link text-muted" >
+            BSE{" "}
+          </a>
+          <a href="" className=" footer-link text-muted" >
+            MCX
+          </a>
+          <a href="" className=" footer-link text-muted" >
+            Terms & conditions
+          </a>
+          <a href="" className=" footer-link text-muted" >
+            Policies & procedures{" "}
+          </a>
+          <a href="" className=" footer-link text-muted" >
+            Privacy policy{" "}
+          </a>
+          <a href="" className=" footer-link text-muted" >
+            Disclosure{" "}
+          </a>
+          <a href="" className=" footer-link text-muted" >
+            For investor's attention
+          </a>
+          <a href="" className=" footer-link text-muted" >
+            Investor charter
+          </a>
         </div>
       </div>
-
     </div>
   );
 }

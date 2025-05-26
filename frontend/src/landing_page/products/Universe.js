@@ -82,7 +82,7 @@ function Universe() {
           </div>
         </div>
         <Link to="/signup">
-          <button
+          <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             style={{ width: "20%", margin: "0 auto", fontSize: "24px" }}
             type="button"
             className="btn btn-primary p-2 mt-4 mb-5 "

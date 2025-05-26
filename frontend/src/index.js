@@ -9,11 +9,13 @@ import ProductPage from './landing_page/products/ProductPage';
 import PricingPage from './landing_page/pricing/PricingPage';
 import SupportPage from './landing_page/support/SupportPage';
 import NotFound from './landing_page/NotFound';
+import LoginPage from './landing_page/login/LoginPage';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
   <Routes>
     <Route path='/' element={<HomePage/>}/>
+    <Route path='/login' element={<LoginPage/>}/>
     <Route path='/signup' element={<SignupPage/>}/>
     <Route path='/about' element={ <AboutPage/>}/>
     <Route path='/product' element={ <ProductPage/>}/>

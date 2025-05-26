@@ -1,6 +1,6 @@
 
 
-function Signup() {
+function Login() {
     return ( 
         <div className="container mt-5 p-5 ">
             <div className="row ">
@@ -9,29 +9,14 @@ function Signup() {
                 </div>
                 <div className="col-2 m-5"></div>
                 <div className="col-5 p-5 ">
-                  <h1>Signup now</h1>
-                  <p className="text-muted fs-5">Or track your existing application</p>
+                  <h1>Login</h1>
                   <form className="p-3" >
-                    <div className="mb-3 input-group ">
-                         <input
-                  type="text"
-                  className="form-control "
-                  name="name"
-                  placeholder="Full Name"
-                  
-                //   value={formData.name}
-                //   onChange={handleChange}
-                  required
-                />
-                    </div>
                      <div className="mb-3">
               <input
                 type="email"
                 className="form-control"
                 name="email"
                 placeholder="Email"
-                // value={formData.email}
-                // onChange={handleChange}
                 required
               />
             </div>
@@ -41,14 +26,11 @@ function Signup() {
                 className="form-control"
                 name="password"
                 placeholder="Password"
-                // value={formData.password}
-                // onChange={handleChange}
                 required
               />
             </div>
             <button type="submit" className="btn btn-primary w-100">
-              {/* {isSignup ? "Sign Up" : "Login"} */}
-              Signup
+              Login
             </button>
                   </form>
                     
@@ -58,5 +40,5 @@ function Signup() {
      );
 }
 
-export default Signup;
+export default Login;
 
