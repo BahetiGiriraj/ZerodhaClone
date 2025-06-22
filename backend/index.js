@@ -24,7 +24,7 @@ mongoose.connect(URL , {
 
 app.use(
   cors({
-    origin: ["http://localhost:3000","http://localhost:3001"],
+    origin: ["https://zerodhaclone-1-2q0t.onrender.com"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
