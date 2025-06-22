@@ -1,8 +1,14 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-const Menu = () => {
+import { Link, useLocation } from "react-router-dom";
+const Menu = ({uN}) => {
   const [selectedMenu, setSelectMenu] = useState(0);
   const [isProfileDropDownOpen, setIsProfileDropDownOpen] = useState(false);
+
+  const location = useLocation();
+
+  // Get query params from URL
+  const queryParams = new URLSearchParams(location.search);
+  const userName = queryParams.get('id');
 
   const handleMenuClick = (index) => {
     setSelectMenu(index);
@@ -93,7 +99,7 @@ const Menu = () => {
         <hr />
         <div className="profile" onClick={handleMenuClick}>
           <div className="avatar">ZU</div>
-          <p className="username">USERID</p>
+          <p className="username">{uN}</p>
         </div>
       </div>
     </div>

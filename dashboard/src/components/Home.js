@@ -2,11 +2,13 @@ import React from "react";
 
 import Dashboard from "./Dashboard";
 import TopBar from "./TopBar";
+import { useLocation } from "react-router-dom";
 
-const Home = () => {
+const Home = ({userName}) => {
+    
   return (
     <>
-      <TopBar />
+      <TopBar uName={userName}/>
       <Dashboard />
     </>
   );
